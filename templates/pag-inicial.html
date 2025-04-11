@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina incial</title>
+</head>
+<body>
+    <section>
+        <h1>Boas vindas {{ session["nome"]}} </h1>
+    </section>
+    <section class="criar-tarefa">
+        <form action="/cadastro/tarefa" method="post">
+            <input type="text" name="titulo" placeholder="titulo...">
+            <input type="text" name="descricao" placeholder="descricao...">
+            <input type="date" name="prazo" placeholder="prazo...">
+            <button>Criar tarefa</button>
+        </form>
+    </section>
+    <section class="exibe-tarefa">
+        {% for tarefas in tarefa %}
+            <h2>{{tarefas.titulo}}</h2>
+            <p>{{tarefas.descricao}}</p>
+            <p>{{tarefas.prazo}}</p>
+        {% endfor %}
+    </section>
+</body>
+</html>
