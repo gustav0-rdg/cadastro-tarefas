@@ -1,0 +1,11 @@
+Requisitos:
+-Cadastrar o usuario no banco de dados
+-Fazer login apenas com um usuario cadastrado
+-Cadastrar tarefa com o nome do usuario
+-Mostrar apenas tarefas do usuario cadastrado
+
+Utilizar:
+-Python - Flask
+-HTML, CSS
+-JavaScript
+-MYSql
