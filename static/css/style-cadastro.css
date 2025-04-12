@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+    background-color: var(--cor-fundo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    color: white;
+}
+
+header{
+    background-color: var(--cor-cards);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    color: black;
+    position: absolute;
+    top: 0;
+}
+
+.nav-bar{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+.tela-principal{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-canto{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    margin-top: 10%;
+
+}
+
+img{
+    width: 80%;
+    height: 100vh;
+    opacity: 9%;
+ }
+.cadastro{
+    width: 30%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-cards);
+    border-radius: 20px;
+}
+
+.form-cadastro{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-cadastro input{
+    width: 70%;
+    height: 20%;
+    border: 0;
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;   
+}
+
+.form-cadastro button{
+    width: 30%;
+    height: 20%;
+    border: 0;
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+    color: white;
+}

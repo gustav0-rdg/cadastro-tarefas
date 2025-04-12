@@ -4,16 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-cadastro.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cores.css') }}">
+
 </head>
 <body>
-    <section class="cadastro">
-        <form action="/cadastro/usuario" method="post">
-            <input type="text" name="usuario" placeholder="Usuario...">
-            <input type="text" name="nome" placeholder="Nome...">
-            <input type="password" name="senha" id="senha" placeholder="Senha...">
-            <button type="submit">Entrar</button>
-        </form>
-        <a href="/login">Já fez uma conta antes? Login</a>
+    <header>
+        <h1>Cadastro</h1>
+        <nav>
+            <ul class="nav-bar">
+                <li>Sobre nós</li>
+                <li>Contato</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="tela-principal">
+        <div class="imagem-canto">
+            <figure>
+                <img src="https://images.pexels.com/photos/3118214/pexels-photo-3118214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </figure>
+        </div>
+        <section class="cadastro">
+            <form action="/cadastro/usuario" method="post" class="form-cadastro">
+                <input type="text" name="usuario" placeholder="Usuario...">
+                <input type="text" name="nome" placeholder="Nome...">
+                <input type="password" name="senha" id="senha" placeholder="Senha...">
+                <button type="submit">Cadastrar</button>
+            </form>
+            <a href="/">Já fez uma conta antes? Login</a>
+        </section>
     </section>
+    
 </body>
 </html>
