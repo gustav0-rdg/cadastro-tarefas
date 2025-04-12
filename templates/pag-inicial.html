@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina incial</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cores.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-tarefas.css') }}">
 </head>
 <body>
     <section>
@@ -19,9 +22,11 @@
     </section>
     <section class="exibe-tarefa">
         {% for tarefas in tarefa %}
-            <h2>{{tarefas.titulo}}</h2>
-            <p>{{tarefas.descricao}}</p>
-            <p>{{tarefas.prazo}}</p>
+            <div class="tarefa">
+                <h2>{{tarefas.titulo}}</h2>
+                <p>{{tarefas.descricao}}</p>
+                <p>{{tarefas.prazo}}</p>      
+            </div>
         {% endfor %}
     </section>
 </body>
