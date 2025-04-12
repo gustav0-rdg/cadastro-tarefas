@@ -4,7 +4,7 @@ from model.controller_tarefa import Tarefas
 app = Flask(__name__)
 
 app.secret_key = "aliciaamordaminhavida"
-@app.route("/")
+@app.route("/cadastro")
 def pag_cadastro():
     return render_template("cadastro.html")
 
@@ -14,9 +14,9 @@ def cadastrar_usuario():
     nome = request.form.get("nome")
     senha = request.form.get("senha")
     Usuario.cadastro(usuario, nome, senha)
-    return redirect("/login")
+    return redirect("/")
 
-@app.route("/login")
+@app.route("/")
 def pag_login():
     return render_template("login.html")
 
