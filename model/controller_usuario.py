@@ -34,6 +34,7 @@ class Usuario:
             valores = (usuario, senha)
             cursor.execute(sql, valores)
             resultado = cursor.fetchone()
+            # Caso resultado retorne, criar sessão para o usuário
             if resultado:
                 session['usuario'] = resultado['usuario']
                 session['nome'] = resultado['nome']
@@ -57,5 +58,7 @@ class Usuario:
             return False
              
         finally:
+            # Caso a conexão seja criada, ela pode ser fechada.
+            # Sem isso, pode ter erro caso a conexão não seja criada.
             if 'conexao' in locals():
                 conexao.close
